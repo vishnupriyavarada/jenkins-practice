@@ -1,24 +1,30 @@
 pipeline{
     agent none
     stages{
-        stage('build'){
+        stage('Build'){
             steps{
                 script{
-                    echo "Hi am from build"
+                    sh """
+                        echo "Hello, this is build !!!"
+                    """
                 }
             }
         }
         stage('Test'){
             steps{
                 script{
-                    echo "Hi am from test"
+                    sh """
+                        echo "Hello, this is test !!!"
+                    """
                 }
             }
         }
-        stage('deploy'){
+        stage('Deploy'){
             steps{
                 script{
-                    echo "Hi am from deploy"
+                    sh """
+                        echo "Hello, this is deploy !!!"
+                    """
                 }
             }
         }
