@@ -1,32 +1,60 @@
 pipeline{
     agent none
     stages{
-        stage('Build'){
+        stage('build'){
             steps{
                 script{
-                    sh """
-                        echo "Hello, this is build !!!"
-                    """
+                    echo "Hi am from build"
                 }
             }
         }
         stage('Test'){
             steps{
                 script{
-                    sh """
-                        echo "Hello, this is test !!!"
-                    """
+                    echo "Hi am from test"
                 }
             }
         }
-        stage('Deploy'){
+        stage('deploy'){
             steps{
                 script{
-                    sh """
-                        echo "Hello, this is deploy !!!"
-                    """
+                    echo "Hi am from deploy"
                 }
             }
         }
     }
 }
+
+
+// pipeline{
+//     agent none
+//     stages{
+//         stage('Build'){
+//             steps{
+//                 script{
+//                     sh """
+//                         echo "Hello, this is build !!!"
+//                     """
+//                 }
+//             }
+//         }
+//         stage('Test'){
+//             steps{
+//                 script{
+//                     sh """
+//                         echo "Hello, this is test !!!"
+//                     """
+//                 }
+//             }
+//         }
+//         stage('Deploy'){
+//             steps{
+//                 script{
+//                     sh """
+//                         echo "Hello, this is deploy !!!"
+//                     """
+//                 }
+//             }
+//         }
+//     }
+// }
